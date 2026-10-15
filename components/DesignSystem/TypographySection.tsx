@@ -9,12 +9,12 @@ const PIXEL_SAMPLES = ["The path so far", "Work", "hoshi", "PMO"];
 type ScaleRow = { element: string; spec: string; className: string; sample: string };
 
 const SCALE: ScaleRow[] = [
-  { element: "Hero title", spec: "text-4xl, md:text-5xl · 700", className: "text-4xl font-bold md:text-5xl", sample: "Hi, I'm Hoshi" },
-  { element: "Section heading", spec: "text-3xl · 600", className: "text-3xl font-semibold", sample: "The path so far" },
-  { element: "Card or item title", spec: "text-xl · 600", className: "text-xl font-semibold", sample: "Project title" },
-  { element: "Body", spec: "text-base · 400 · leading-7", className: "text-base leading-7", sample: "Reading text sits at this size." },
-  { element: "Metadata", spec: "text-sm · mono", className: "font-mono text-sm text-muted-foreground", sample: "2024 — 2025" },
-  { element: "Pixel label", spec: "text-sm · pixel · tracked", className: "font-pixel text-sm uppercase tracking-widest text-muted-foreground", sample: "Work" },
+  { element: "Hero title", spec: "text-4xl, md:text-5xl | 700", className: "text-4xl font-bold md:text-5xl", sample: "Hi, I'm Hoshi" },
+  { element: "Section heading", spec: "text-3xl | 600", className: "text-3xl font-semibold", sample: "The path so far" },
+  { element: "Card or item title", spec: "text-xl | 600", className: "text-xl font-semibold", sample: "Project title" },
+  { element: "Body", spec: "text-base | 400 | leading-7", className: "text-base leading-7", sample: "Reading text sits at this size." },
+  { element: "Metadata", spec: "text-sm | mono", className: "font-mono text-sm text-muted-foreground", sample: "2024 — 2025" },
+  { element: "Pixel label", spec: "text-sm | pixel | tracked", className: "font-pixel text-sm uppercase tracking-widest text-muted-foreground", sample: "Work" },
 ];
 
 const TypographySection = () => {

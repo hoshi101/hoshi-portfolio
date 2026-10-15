@@ -120,14 +120,14 @@ export const MotionSection = () => {
               <PixelStar scale={2} className="motion-safe:animate-twinkle" />
             </div>
             <p className="text-sm">Twinkle</p>
-            <p className="font-mono text-xs text-muted-foreground">3s · steps · background stars</p>
+            <p className="font-mono text-xs text-muted-foreground">3s | steps | background stars</p>
           </li>
           <li className="rounded-lg border border-border bg-card p-5">
             <div className="flex h-16 items-center">
               <PixelStar scale={2} className="motion-safe:animate-bob" />
             </div>
             <p className="text-sm">Bob</p>
-            <p className="font-mono text-xs text-muted-foreground">1.2s · steps · PMO idle</p>
+            <p className="font-mono text-xs text-muted-foreground">1.2s | steps | PMO idle</p>
           </li>
           <li className="rounded-lg border border-border bg-card p-5">
             <div className="flex h-16 items-center">
@@ -139,7 +139,7 @@ export const MotionSection = () => {
               </a>
             </div>
             <p className="text-sm">UI transition</p>
-            <p className="font-mono text-xs text-muted-foreground">200ms · ease-out</p>
+            <p className="font-mono text-xs text-muted-foreground">200ms | ease-out</p>
           </li>
         </ul>
       </Group>

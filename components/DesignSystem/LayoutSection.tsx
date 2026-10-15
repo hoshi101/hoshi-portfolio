@@ -41,9 +41,9 @@ const LayoutSection = () => {
     >
       <Group title="Column widths">
         <div className="space-y-3">
-          <div className="rounded-md bg-muted p-3 font-mono text-sm">max-w-5xl · wide</div>
+          <div className="rounded-md bg-muted p-3 font-mono text-sm">max-w-5xl | wide</div>
           <div className="mx-auto max-w-3xl rounded-md border border-star bg-muted p-3 font-mono text-sm">
-            max-w-3xl · reading
+            max-w-3xl | reading
           </div>
         </div>
       </Group>

@@ -14,7 +14,7 @@ const Contrast = ({ token, theme }: { token: ColorToken; theme: ThemeName }) => 
   const passes = ratio >= AA;
   return (
     <p className="mt-1 font-mono text-xs">
-      {ratio.toFixed(1)}:1 on {token.on} · {passes ? "AA pass" : "AA fail"}
+      {ratio.toFixed(1)}:1 on {token.on} | {passes ? "AA pass" : "AA fail"}
     </p>
   );
 };
@@ -25,7 +25,7 @@ const TokenSwatch = ({ token }: { token: ColorToken }) => {
       <div className="p-4">
         <p className="font-mono text-sm">
           {token.name}
-          {token.derived ? <span className="text-muted-foreground"> · derived</span> : null}
+          {token.derived ? <span className="text-muted-foreground"> | derived</span> : null}
         </p>
         <p className="mt-1 text-sm text-muted-foreground">{token.use}</p>
       </div>
@@ -77,7 +77,7 @@ const ColorSection = () => {
               </div>
               <div className="p-4">
                 <p className="font-mono text-sm">
-                  {color.id} · class {color.spectral}
+                  {color.id} | class {color.spectral}
                 </p>
                 <p className="mt-1 text-sm">{color.name}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{color.where}</p>

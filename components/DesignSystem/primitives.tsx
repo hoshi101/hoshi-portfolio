@@ -56,7 +56,7 @@ export const OptionCard = ({ id, name, note, current, children, className }: Opt
       <div className="flex flex-wrap items-center gap-2 font-mono text-sm">
         <span className="rounded-sm bg-muted px-1.5 py-0.5">{id}</span>
         <span>{name}</span>
-        {current ? <span className="text-muted-foreground">· in use now</span> : null}
+        {current ? <span className="text-muted-foreground">| in use now</span> : null}
       </div>
       <div className="mt-4 flex-1">{children}</div>
       {note ? <p className="mt-4 text-sm leading-6 text-muted-foreground">{note}</p> : null}
