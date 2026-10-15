@@ -1,26 +1,30 @@
 import React from 'react'
-import Link from 'next/link'
-import PixelStar from '@/components/Pixel/PixelStar'
-import { navLinks, resumeLink, siteName } from '@/content/nav'
+import ThemeToggler from '@/components/Helper/ThemeToggler'
+import { navLinks } from '@/content/nav'
+import Logo from './Logo'
+import NavItem from './NavItem'
+import ResumeButton from './ResumeButton'
 
 const Nav = () => {
   return (
-    <nav aria-label="Main">
-      <Link href="/">
-        <PixelStar />
-        {siteName}
-      </Link>
+    <nav
+      aria-label="Main"
+      className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6 md:px-8"
+    >
+      <Logo />
 
-      <ul>
-        {navLinks.map((link) => (
-          <li key={link.href}>
-            <Link href={link.href}>{link.label}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className="flex items-center gap-6">
+        <ul className="flex items-center gap-6 text-sm">
+          {navLinks.map((link) => (
+            <NavItem key={link.href} href={link.href}>
+              {link.label}
+            </NavItem>
+          ))}
+        </ul>
 
-      {/* A file in public/, not a route, so a plain anchor is enough. */}
-      <a href={resumeLink.href}>{resumeLink.label}</a>
+        <ThemeToggler />
+        <ResumeButton />
+      </div>
     </nav>
   )
 }
