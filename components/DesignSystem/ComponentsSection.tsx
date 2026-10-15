@@ -9,11 +9,9 @@ type ButtonSize = {
   current?: boolean;
 };
 
-// C is not a shadcn size variant, so it is set through className.
 const BUTTON_SIZES: ButtonSize[] = [
-  { id: "A", name: "h-7 · 12px text", size: "default", current: true },
-  { id: "B", name: "h-8 · 12px text", size: "lg" },
-  { id: "C", name: "h-10 · 14px text", size: "lg", className: "h-10 px-4 text-sm" },
+  { id: "default", name: "h-10 | 14px text", size: "default", current: true },
+  { id: "lg", name: "h-8 | 12px text", size: "lg" },
 ];
 
 const RADII = ["rounded-sm", "rounded-md", "rounded-lg", "rounded-xl"];
@@ -28,7 +26,7 @@ const ComponentsSection = () => {
     >
       <Group
         title="Buttons"
-        hint="One primary style and one outline style. Three sizes to choose from: the shadcn default is small for a portfolio, so I suggest Button C."
+        hint="One primary style and one outline style. The default size is 40px tall. The smaller lg size is shown for comparison."
       >
         <ThemePair>
           <ul className="space-y-4">
@@ -41,8 +39,8 @@ const ComponentsSection = () => {
                   Resume
                 </Button>
                 <span className="font-mono text-xs text-muted-foreground">
-                  Button {option.id} · {option.name}
-                  {option.current ? " · in use now" : ""}
+                  Button {option.id} | {option.name}
+                  {option.current ? " | in use now" : ""}
                 </span>
               </li>
             ))}
