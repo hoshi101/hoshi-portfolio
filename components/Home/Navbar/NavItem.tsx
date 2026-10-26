@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { focusRing } from '@/lib/focus'
 
 type NavItemProps = {
   href: string
@@ -18,7 +19,8 @@ const NavItem = ({ href, children, className, onClick }: NavItemProps) => {
         href={href}
         onClick={onClick}
         className={cn(
-          'rounded-sm outline-none decoration-2 underline-offset-4 hover:underline hover:decoration-star focus-visible:ring-2 focus-visible:ring-ring',
+          focusRing,
+          'rounded-sm decoration-2 underline-offset-4 hover:underline hover:decoration-star',
           className
         )}
       >

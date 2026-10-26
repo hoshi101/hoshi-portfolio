@@ -17,3 +17,6 @@ export const navLinks: NavLink[] = [
 
 // A file in public/, so it is served from the site root.
 export const resumeLink: NavLink = { label: "Resume", href: "/resume.pdf" };
+
+// Lets keyboard users jump past the navigation to the page content.
+export const skipLink: NavLink = { label: "Skip to content", href: "#main" };

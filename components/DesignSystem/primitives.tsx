@@ -13,7 +13,7 @@ type SectionBlockProps = {
 
 export const SectionBlock = ({ id, label, title, description, children }: SectionBlockProps) => {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-8 border-t border-border py-16 md:py-24">
+    <section id={id} aria-labelledby={`${id}-title`} className="border-t border-border py-16 md:py-24">
       <PixelLabel>{label}</PixelLabel>
       <h2 id={`${id}-title`} className="mt-2 text-3xl font-semibold">
         {title}

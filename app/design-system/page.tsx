@@ -25,7 +25,7 @@ const SECTIONS = [
 
 const DesignSystemPage = () => {
   return (
-    <main className="mx-auto w-full max-w-5xl px-6 md:px-8">
+    <div className="mx-auto w-full max-w-5xl px-6 md:px-8">
       <header className="py-16 md:py-24">
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -61,7 +61,7 @@ const DesignSystemPage = () => {
       <PixelArtSection />
       <BackgroundSection />
       <MotionSection />
-    </main>
+    </div>
   );
 };
 

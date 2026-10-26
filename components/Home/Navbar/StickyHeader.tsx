@@ -3,8 +3,9 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
 
-// Only the header shell needs the browser (scroll position). The bars inside
-// are passed in as children, so they stay Server Components.
+// Only the header shell needs the browser (scroll position). The bars are
+// passed in as children, so this component does not pull the desktop bar
+// into the client bundle.
 const StickyHeader = ({ children }: { children: React.ReactNode }) => {
   const [scrolled, setScrolled] = React.useState(false)
 

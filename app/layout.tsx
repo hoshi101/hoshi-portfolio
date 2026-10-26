@@ -4,6 +4,7 @@ import Provider from "@/components/Hoc/Provider";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
+import SkipLink from "@/components/Home/Navbar/SkipLink";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -27,9 +28,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("h-full", "antialiased", geistMono.variable, pixelify.variable, "font-sans", inter.variable)}
+      className={cn("h-full", "scroll-pt-16", "antialiased", geistMono.variable, pixelify.variable, "font-sans", inter.variable)}
     >
-      <body className="min-h-full flex flex-col"><Provider><ResponsiveNav />{children}</Provider></body>
+      <body className="min-h-full flex flex-col"><Provider>
+        <SkipLink />
+        <ResponsiveNav />
+        <main id="main" tabIndex={-1} className="flex-1 outline-none">
+          {children}
+        </main>
+      </Provider></body>
     </html>
   );
 }

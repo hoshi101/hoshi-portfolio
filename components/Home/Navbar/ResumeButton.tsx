@@ -9,7 +9,12 @@ const ResumeButton = ({ className }: { className?: string }) => {
   return (
     <a
       href={resumeLink.href}
-      className={cn(buttonVariants({ variant: 'outline' }), className)}
+      className={cn(
+        buttonVariants({ variant: 'outline' }),
+        // Full-strength ring, the same as the other controls in the bar.
+        'focus-visible:ring-ring',
+        className
+      )}
     >
       {resumeLink.label}
     </a>
